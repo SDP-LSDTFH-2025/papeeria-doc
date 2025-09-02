@@ -1,0 +1,148 @@
+\chapter{Technology Stack}
+\section{Frontend Stack}
+
+The frontend of the system is designed to provide a responsive, interactive, and user-friendly interface. It emphasizes modularity, reusability, and maintainability of components while ensuring fast load times and smooth navigation.
+
+\subsection{Framework and Libraries}
+\begin{itemize}
+    \item \textbf{React.js} --- Used as the primary framework for building a component-based user interface. React enables efficient rendering through its virtual DOM and promotes reusability of UI components.
+    \item \textbf{Vite} --- Adopted as the build tool and development server. Vite provides a faster development experience with hot module replacement and optimized builds.
+    \item \textbf{CSS} --- Utilized for styling to achieve a clean, modern, and responsive design with utility-first classes.
+    \item \textbf{Lucide Icons} --- Used for lightweight, customizable icons across the interface.
+\end{itemize}
+
+\subsection{Design Principles}
+\begin{itemize}
+    \item \textbf{Responsiveness} --- Ensures seamless user experiences across devices with different screen sizes.
+    \item \textbf{Accessibility (aria)} --- Follows best practices to make the application usable for all users, including those with disabilities.
+    \item \textbf{Performance Optimization} --- Lazy loading, code splitting, and optimized assets improve loading times.
+\end{itemize}
+
+\subsection{Testing and Quality Assurance}
+\begin{itemize}
+    \item \textbf{Playwright } --- Applied for integration testing of whole app to guarantee reliability.
+\end{itemize}
+
+\subsection{Deployment}
+\begin{itemize}
+    \item \textbf{Vercel} --- The frontend is deployed on Vercel, leveraging its CDN for fast global delivery and integration with GitHub for continuous deployment.
+\end{itemize}
+
+
+\subsection{Industry Resources}
+To justify the frontend technology choices, several authoritative industry resources were consulted:
+
+\begin{itemize}
+    \item \textbf{JavaScript (JS)}: Recognized as the most widely used programming language for web development, according to the Stack Overflow Developer Survey.  
+    \url{https://survey.stackoverflow.co/2024/}
+
+    \item \textbf{React}: Maintained by Meta and widely adopted in industry, React is considered a standard for building scalable, component-based user interfaces.  
+    \url{https://react.dev/}
+
+    \item \textbf{Vite}: A next-generation frontend tooling that provides fast Hot Module Replacement (HMR) and optimized builds, recommended by many open-source contributors and adopted across projects for its developer experience.  
+    \url{https://vitejs.dev/}
+
+    \item \textbf{CSS}: CSS is simple to use, and what was familiar to the group. No hassle, no need to learn syntax making the whole design experience seamless.
+    \url{https://www.w3schools.com/css/}
+\end{itemize}
+
+
+\section{Backend Stack}
+Overview:
+This document provides a comprehensive guide to setting up and running the SDP Project backend API. The backend is built with Node.js, Express, Sequelize ORM, and PostgreSQL (NeonDB).
+
+\textbf{TECHNOLOGY STACK FOR BACKEND}
+
+\begin{itemize}
+    \item \textbf{Runtime:} Node.js
+    \item \textbf{Framework:} Express.js
+    \item \textbf{Database:} PostgreSQL (NeonDB)
+    \item \textbf{ORM:} Sequelize
+    \item \textbf{Documentation:} Swagger
+    \item \textbf{Authentication:} JWT (JSON Web Tokens)
+    \item \textbf{Development Tool:} Nodemon
+\end{itemize}
+
+\textbf{PREREQUISITES} 
+\begin{itemize}
+    \item \textbf{Node.js:} v16 or higher
+    \item \textbf{Package Manager:} npm
+    \item \textbf{Database:} PostgreSQL (NeonDB recommended)
+    \item \textbf{Version Control:} Git
+\end{itemize}
+
+
+\subsection{Database System}
+\textbf{Option A: Local PostgreSQL}
+\begin{itemize}
+    \item \textbf{Install PostgreSQL locally}
+    \item \textbf{Create a database}
+    \item \textbf{Update \texttt{.env} with local credentials}
+\end{itemize}
+
+\textbf{Option B: NeonDB (Recommended)}
+\begin{itemize}
+    \item \textbf{Sign up at} \url{https://neon.tech}
+    \item \textbf{Create a new project}
+    \item \textbf{Copy the connection string}
+    \item \textbf{Update \texttt{.env} with NeonDB credentials}
+\end{itemize}
+
+
+\subsection{Industry Resources}
+\textbf{BACKEND References used:}
+
+\begin{enumerate}
+  \item \url{https://neon.com/docs/introduction} — official Neon docs. 
+  \item \url{https://www.postgresql.org/docs/} — official Postgres manual. 
+  \item \url{https://swagger.io/docs/} — OpenAPI / Swagger official site. 
+  \item \url{https://en.wikipedia.org/wiki/Express.js} — details on Express framework. 
+  \item \url{https://www.npmjs.com/package/nodemon} — nodemon npm page. 
+  \item \url{https://www.youtube.com/watch?v=IlPPDIRjBKs} — YouTube video tutorial. 
+  \item \url{https://www.youtube.com/watch?v=SccSCuHhOw0} — quick Express.js tutorial. 
+  \item \url{https://www.youtube.com/watch?v=dhMlXoTD3mQ} — Swagger video. 
+  \item \url{https://www.youtube.com/watch?v=f2EqECiTBL8} — comprehensive Node.js + Express course. 
+  \item \url{https://youtu.be/9ZixI8Xy0T0?si=8YIfUflRKnW7CmtN} - postgres quick Overview
+\end{enumerate}
+
+
+\section{Testing Approach}
+[Testing philosophy and coverage goals]
+
+We aim to best the APIs using vitest because it fast and simple.
+while for frontend e2e testing os more reliable. I covers most cases and most integration. 
+
+\subsection{Unit Testing}
+[Testing tools and methodology]
+Backend - vitest
+
+\subsection{End-to-End Testing}
+[UI automation strategy]
+Cypress - frontend testing Replaced by Playwright due to the multi window feature
+
+\subsection{Industry Resources}
+[Testing ROI studies or standards]
+\url{https://testgrid.io/blog/cypress-testing/}
+\url{https://www.testim.io/blog/cypress-vs-selenium/}
+\url{https://dev.to/walmyrlimaesilv/10-reasons-why-you-should-use-cypress-for-web-testing-automation-jlb}
+\url{https://www.lambdatest.com/blog/cypress-vs-playwright/}
+\url{https://www.browserstack.com/guide/playwright-vs-cypress}
+\url{https://www.checklyhq.com/learn/playwright/playwright-vs-cypress/}
+\url{https://testgrid.io/blog/cypress-vs-playwright/}
+
+\section{Development Tools}
+[Team development workflow]
+
+\subsection{Version Control}
+[Git workflow and branching model]
+
+\subsection{CI/CD Pipeline}
+[Automation tools and stages]
+
+\subsection{Hosting Platform}
+\textbf{Backend hosted on Render}
+
+\subsection{Industry Resources}
+[Reliability engineering standards]
+\url{https://www.conventionalcommits.org/en/v1.0.0/}
+\url{https://blog.devgenius.io/make-a-meaningful-git-commit-message-with-semantic-commit-message-b39a79b13aa3}

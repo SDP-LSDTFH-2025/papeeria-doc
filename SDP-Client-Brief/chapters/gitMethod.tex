@@ -1,0 +1,57 @@
+\chapter{Git Methodology}
+
+\section{Overview}
+Git is a distributed version control system designed to handle everything from small to very large projects with speed and efficiency. It allows multiple developers to work on the same codebase simultaneously without interfering with each other's work. This chapter outlines the Git strategies, branching models, and versioning conventions recommended for your project. By adopting a consistent methodology, your team can improve collaboration, track changes effectively, and maintain a stable codebase throughout the development lifecycle.
+
+\section{Methodology}
+A well-defined Git workflow is essential for team coordination and code management. The following practices are recommended:
+
+\subsection*{Branching Strategy}
+\begin{itemize}
+    \item \textbf{Main Branch}: The \texttt{main} branch contains production-ready code. It should always be stable and deployable.
+    \item \textbf{Development Branch}: The \texttt{develop} branch serves as an integration branch for features. It is used to merge completed features before they are moved to \texttt{main}.
+    \item \textbf{Feature Branches}: For each new feature, create a branch from \texttt{develop} named \texttt{feature/<feature-name>}. This keeps work isolated until the feature is complete and tested.
+    \item \textbf{Release Branches}: When preparing a release, create a \texttt{release/<version>} branch from \texttt{develop}. This allows for final testing and bug fixes without disrupting ongoing development.
+    \item \textbf{Hotfix Branches}: For urgent fixes in production, create a \texttt{hotfix/<issue>} branch from \texttt{main}. Once fixed, merge it into both \texttt{main} and \texttt{develop}.
+\end{itemize}
+
+\subsection*{Versioning Convention}
+For this project, a Calendar Versioning (CalVer) approach is recommended due to its simplicity and relevance for tools with frequent iterations:
+\begin{itemize}
+    \item \textbf{Format}: \texttt{YYYY.MM.DD\_MODIFIER}
+    \item \textbf{Example}: \texttt{2025.08.12\_sprint1}
+    \item This format provides clarity on the timeline and context of the release (e.g., which sprint it corresponds to).
+\end{itemize}
+
+\subsection*{Commit Practices}
+\begin{itemize}
+    \item Write clear, descriptive commit messages.
+    \item Use the imperative mood (e.g., "Add login feature" instead of "Added login feature").
+    \item Commit often to ensure changes are incremental and traceable.
+\end{itemize}
+
+\section{Why This Git Approach is Recommended}
+This Git methodology is ideal for your team and project for the following reasons:
+\begin{itemize}
+    \item \textbf{Simplicity}: The branching strategy is easy to understand and implement, even for teams new to Git.
+    \item \textbf{Flexibility}: Feature branches allow developers to work independently without affecting the main codebase.
+    \item \textbf{Traceability}: CalVer provides clear, meaningful version numbers that reflect development cycles.
+    \item \textbf{Scalability}: The workflow supports both small and large teams, making it suitable for your current and future projects.
+    \item \textbf{Industry Alignment}: This approach is widely used in open-source and commercial projects, ensuring best practices are followed.
+\end{itemize}
+
+\section{Industry Resources \& Justification}
+The proposed Git methodology and versioning convention are supported by industry standards and authoritative resources:
+
+\subsection*{Git and Version Control}
+\begin{itemize}
+    \item \href{https://git-scm.com/doc}{Official Git Documentation}: The definitive guide to Git commands and concepts.
+    \item \href{https://nvie.com/posts/a-successful-git-branching-model/}{A Successful Git Branching Model}: The classic article introducing GitFlow, which inspired the branching strategy recommended here.
+\end{itemize}
+
+\subsection*{Versioning Schemes}
+\begin{itemize}
+    \item \href{https://semver.org/}{Semantic Versioning (SemVer)}: A widely adopted scheme for versioning software based on meaningful version numbers.
+    \item \href{https://calver.org/}{Calendar Versioning (CalVer)}: A versioning scheme based on project release dates, ideal for projects with time-based releases.
+    \item \href{https://sedimental.org/designing_a_version.html}{Designing a Version}: A practical guide on choosing and designing a versioning scheme, supporting the use of modifiers like \texttt{\_sprint1}.
+\end{itemize}

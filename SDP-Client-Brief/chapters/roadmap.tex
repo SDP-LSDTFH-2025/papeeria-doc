@@ -1,0 +1,113 @@
+\chapter{Project Road-map}
+
+\section{Hidden Requirements}
+
+\begin{center} % centers the table on the page
+\begin{tabular}{|c|} % 'c' for center alignment
+\hline
+\textbf{Filter by courses} \\
+\hline
+\textbf{Send notifications} \\
+\hline
+\textbf{Link similar courses} \\
+\hline
+\end{tabular}
+\end{center}
+
+
+
+\section{Development Phases}
+The project follows four iterative sprints aligned with course requirements:
+
+\subsection{Sprint 1 (Foundation)}
+\begin{itemize}
+    \item \textbf{Focus}: System setup and core infrastructure
+    \item \textbf{Key Deliverables}:
+        \begin{itemize}
+            \item Authentication system (Google OAuth)
+            \item Version control implementation
+            \item Documentation site (VitePress)
+            \item Project management framework (Crystal Clear)
+        \end{itemize}
+    \item \textbf{Rubric Weight}: 80\% of sprint grade
+\end{itemize}
+
+\subsection{Sprint 2 (Core Features)}
+\begin{itemize}
+    \item \textbf{Focus}: Implementation of primary functionality
+    \item \textbf{Key Deliverables}:
+        \begin{itemize}
+            \item Course specification system
+            \item Buddy matching algorithm
+            \item Resource sharing with PDF tagging
+            \item Google Calendar integration
+        \end{itemize}
+    \item \textbf{Rubric Weight}: 95\% of sprint grade
+\end{itemize}
+
+\subsection{Sprint 3 (Feature Completion)}
+\begin{itemize}
+    \item \textbf{Focus}: Enhanced functionality and refinement
+    \item \textbf{Key Deliverables}:
+        \begin{itemize}
+            \item Discussion threads with Markdown
+            \item Similar course tagging
+            \item Progress tracking dashboard
+            \item Accessibility improvements
+        \end{itemize}
+\end{itemize}
+
+\subsection{Sprint 4 (Polishing)}
+\begin{itemize}
+    \item \textbf{Focus}: Final touches and documentation
+    \item \textbf{Key Deliverables}:
+        \begin{itemize}
+            \item Comprehensive testing coverage
+            \item Group and individual reports
+            \item Final presentation materials
+            \item Stretch goals (if time permits)
+        \end{itemize}
+\end{itemize}
+
+\section{Feature Prioritization}
+\begin{table}[h]
+\centering
+\caption{Feature Priority by Sprint}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Priority} & \textbf{Sprint} & \textbf{Key Features} \\ \hline
+Critical & 1 & Auth, Docs, Setup \\ \hline
+High & 2 & Courses, Matching, Resources \\ \hline
+Medium & 3 & Discussions, Progress \\ \hline
+Low & 4 & Offline support \\ \hline
+\end{tabular}
+\end{table}
+
+\section{Technical Implementation}
+\subsection{Core Stack}
+\begin{itemize}
+    \item \textbf{Frontend}: React with TypeScript
+    \item \textbf{Backend}: Node.js/Express
+    \item \textbf{Database}: PostgreSQL (NeonDB) + Sequalise
+    \item \textbf{Testing}: Cypress + Vitest
+\end{itemize}
+
+\subsection{Integration Points}
+\begin{itemize}
+    \item Google OAuth for authentication
+    \item Google Calendar API for scheduling
+    \item Socket.IO for real-time chat
+    \item Firebase for notifications
+\end{itemize}
+
+\section{Risk Management}
+\begin{itemize}
+    \item \textbf{Technical Risks}: API rate limits, database scaling
+    \item \textbf{Schedule Risks}: Feature creep in Sprint 2
+    \item \textbf{Mitigation Strategies}:
+        \begin{itemize}
+            \item Weekly client check-ins
+            \item Automated testing coverage
+            \item Priority-based backlog grooming
+        \end{itemize}
+\end{itemize}

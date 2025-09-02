@@ -1,0 +1,58 @@
+\documentclass{book}
+
+% Preamble - all your packages and settings
+\usepackage{graphicx}
+\usepackage{lipsum} % for placeholder text, remove in real project
+\usepackage{authblk} % For better author formatting
+\usepackage{array} % For better table formatting
+\usepackage{booktabs} % For professional-looking tables
+\usepackage{url} % For proper URL formatting
+\usepackage{hyperref}
+
+
+
+\title{Study Buddy Enhanced}
+\author{LSDTFH}
+\affil[ ]{University of the Witwatersrand}
+
+% Date range
+\date{August 5, 2025 -- \today}
+
+\begin{document}
+
+\maketitle
+
+% Author table
+\begin{center}
+    \begin{tabular}{>{\bfseries}l<{\hspace{2em}}l}
+        \toprule
+        \multicolumn{2}{c}{\large\textbf{Project Team}} \\
+        \midrule
+        Author Name & Student Number \\
+        \midrule
+        Lebo Kharafu & 2577390 \\
+        TrustGod Mokgwadi & 2705185\\
+        Favour Mtshali & 2662283 \\
+        Dimpho Matea & 2678460 \\
+        Sinethemba Khumalo & 2672254\\
+        Author Six & 678901 \\
+        Hulisani Netshaulu & 2769364\\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+\tableofcontents
+
+% Include your chapters
+\include{chapters/roadmap}
+\include{chapters/scrumMethod}
+\include{chapters/techstack}
+\include{chapters/gitMethod}
+\include{chapters/frontend}
+\include{chapters/backend}
+\include{chapters/testing}
+\include{chapters/meetings}
+\include{chapters/pitfalls}
+\include{chapters/userfeed}
+
+\end{document}
