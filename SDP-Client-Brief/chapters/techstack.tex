@@ -35,15 +35,29 @@ To justify the frontend technology choices, several authoritative industry resou
 \begin{itemize}
     \item \textbf{JavaScript (JS)}: Recognized as the most widely used programming language for web development, according to the Stack Overflow Developer Survey.  
     \url{https://survey.stackoverflow.co/2024/}
+    \item We could have used other technologies such as Python,Dart and TypeScript
+    \item\textbf {Advantages of JS} :- universal browser support ,runs on all major browsers. Massive Ecosystem – Libraries \& frameworks (React, Vue, Angular, Node.js, Express) are mature.
+    \item \textbf{Disadvantages of comparable technologies}:- Python Slow performance in browsers, limited support for frontend interactivity, extra layers to run in browser.TypeScript Needs compilation step, slightly steeper learning curve.
+    \url{https://dev.to/codingcatdev/typescript-is-freaking-hard-20k6#:~:text=The%20primary%20challenge%20in%20learning%20TypeScript%20lies%20in,the%20strict%20type%20requirements%20of%20TypeScript%20initially%20overwhelming.} 
 
-    \item \textbf{React}: Maintained by Meta and widely adopted in industry, React is considered a standard for building scalable, component-based user interfaces.  
+    \item \textbf{React}: Maintained by Meta and widely adopted in industry, React is considered a standard for building scalable, component-based user interfaces. 
     \url{https://react.dev/}
-
-    \item \textbf{Vite}: A next-generation frontend tooling that provides fast Hot Module Replacement (HMR) and optimized builds, recommended by many open-source contributors and adopted across projects for its developer experience.  
-    \url{https://vitejs.dev/}
+        \item Chosen as majority of group is comfortable with this framework.
+    \item\textbf {Advantages of React} :- Component-Based Architecture – Build reusable UI components, making code more modular.Learning Curve – Easier to get started with compared to Angular or Vue (once you know JS)
+    \item \textbf{Disadvantages of comparable technologies}:- Vue.js ,smaller ecosystem, not as many large-scale apps as React, less corporate backing.Angular -has a steeper learining curve with heavier framework and verbose code and is written in typescript which is difficult.
+    \url{https://kinsta.com/blog/angular-vs-react/#angular-vs-react-an-indepth-comparison} 
+    
+    \item \textbf{Vite}: A next-generation frontend tooling that provides fast Hot Module Replacement (HMR) and optimized builds, recommended by many open-source contributors and adopted across projects for its developer experience.
+    \item Chosen as majority of group is comfortable and familiar with this.
+    \item\textbf {Advantages of Vite} :- Framework-Agnostic – Works with React, Vue, Svelte, Preact, Solid, etc.Hot Module Replacement (HMR) – Changes appear in the browser almost instantly.
+    \item \textbf{Disadvantages of comparable technologies}:-Webpack,slower dev server, complex configuration.Parcel,smaller community and not as broad as vite
+    \url{https://betterstack.com/community/guides/scaling-nodejs/vite-vs-webpack/}
 
     \item \textbf{CSS}: CSS is simple to use, and what was familiar to the group. No hassle, no need to learn syntax making the whole design experience seamless.
-    \url{https://www.w3schools.com/css/}
+    \item Chosen as majority of group is comfortable and familiar with this.
+    \item\textbf {Advantages of CSS} :- Universal Support – Works in all browsers without any preprocessing or plugins. and it allows full control.
+    \item \textbf{Disadvantages of comparable technologies}:Sass/SCSS,Requires compilation, adds complexity.Tailwind CSS,can create messy HTML with many classes; learning curve for “utility-first” mindset.
+    \url{https://dev.to/bridget_amana/the-sass-vs-css-debate-is-sass-really-that-superior-277g}
 \end{itemize}
 
 
@@ -92,18 +106,43 @@ This document provides a comprehensive guide to setting up and running the SDP P
 \subsection{Industry Resources}
 \textbf{BACKEND References used:}
 
-\begin{enumerate}
-  \item \url{https://neon.com/docs/introduction} — official Neon docs. 
-  \item \url{https://www.postgresql.org/docs/} — official Postgres manual. 
-  \item \url{https://swagger.io/docs/} — OpenAPI / Swagger official site. 
-  \item \url{https://en.wikipedia.org/wiki/Express.js} — details on Express framework. 
-  \item \url{https://www.npmjs.com/package/nodemon} — nodemon npm page. 
-  \item \url{https://www.youtube.com/watch?v=IlPPDIRjBKs} — YouTube video tutorial. 
-  \item \url{https://www.youtube.com/watch?v=SccSCuHhOw0} — quick Express.js tutorial. 
-  \item \url{https://www.youtube.com/watch?v=dhMlXoTD3mQ} — Swagger video. 
-  \item \url{https://www.youtube.com/watch?v=f2EqECiTBL8} — comprehensive Node.js + Express course. 
-  \item \url{https://youtu.be/9ZixI8Xy0T0?si=8YIfUflRKnW7CmtN} - postgres quick Overview
-\end{enumerate}
+\begin{itemize}
+    \item \textbf{Node.js}: Node.js is a JavaScript runtime built on Chrome's V8 engine. It allows the development of fast and scalable network applications using JavaScript on the server side.
+    \item \textbf{Advantages of Node.js}: Event-driven, non-blocking I/O makes it lightweight and efficient; same language (JavaScript) on both client and server speeds up development.
+    \item \textbf{Disadvantages of comparable technologies}: 
+    Django (Python-based) – Steeper learning curve for JS developers and heavier runtime. 
+    Ruby on Rails – Convention-heavy, slower performance under high concurrency.
+    \url{https://www.geeksforgeeks.org/blogs/nodejs-vs-django/}
+
+    \item \textbf{Express.js}: Express is a fast, minimalist web framework for Node.js used to build APIs and web applications.
+    \item \textbf{Advantages of Express.js}: Minimal setup, middleware support, high flexibility and a large ecosystem of plugins.
+    \item \textbf{Disadvantages of comparable technologies}: 
+    Koa.js – More modular but lacks built-in routing and middleware. 
+    Fastify – Faster in some benchmarks but smaller community and ecosystem.
+    \url{https://www.geeksforgeeks.org/blogs/nodejs-vs-django/}
+
+    \item \textbf{PostgreSQL}: PostgreSQL is a powerful, open-source relational database known for its reliability and feature set.
+    \item \textbf{Advantages of PostgreSQL}: ACID compliance, strong support for JSON, advanced indexing and extensibility for complex applications.
+    \item \textbf{Disadvantages of comparable technologies}: 
+    MySQL – Faster for simple reads but weaker at advanced queries and standards compliance. 
+    MongoDB – Flexible document store but no strict relational schema or ACID guarantees by default.
+    \url{https://www.geeksforgeeks.org/postgresql/difference-between-postgresql-and-mongodb/}
+
+    \item \textbf{Swagger}: Swagger (OpenAPI) is a toolset for designing, building, documenting, and consuming RESTful web services.
+    \item \textbf{Advantages of Swagger}: Automatically generates interactive API documentation, enforces API standards, improves team collaboration.
+    \item \textbf{Disadvantages of comparable technologies}: 
+    Postman – Great for testing but weaker at automatic API documentation. 
+    RAML – Similar to OpenAPI but less widely adopted.
+    \url{https://apidog.com/articles/postman-vs-swagger/}
+
+    \item \textbf{NeonDB}: NeonDB is a serverless PostgreSQL platform designed for high scalability and developer-friendly workflows.
+    \item \textbf{Advantages of NeonDB}: Automatic scaling, built-in branching for databases, zero-downtime operations, and fully managed infrastructure.
+    \item \textbf{Disadvantages of comparable technologies}: 
+    Supabase – Offers a Postgres backend with built-in auth but less fine-grained control. 
+    Amazon RDS – Powerful and flexible but more complex to configure and manage.
+    \url{https://www.bytebase.com/blog/neon-vs-supabase/}
+\end{itemize}
+
 
 
 \section{Testing Approach}
@@ -125,10 +164,23 @@ Cypress - frontend testing Replaced by Playwright due to the multi window featur
 \url{https://testgrid.io/blog/cypress-testing/}
 \url{https://www.testim.io/blog/cypress-vs-selenium/}
 \url{https://dev.to/walmyrlimaesilv/10-reasons-why-you-should-use-cypress-for-web-testing-automation-jlb}
-\url{https://www.lambdatest.com/blog/cypress-vs-playwright/}
-\url{https://www.browserstack.com/guide/playwright-vs-cypress}
-\url{https://www.checklyhq.com/learn/playwright/playwright-vs-cypress/}
-\url{https://testgrid.io/blog/cypress-vs-playwright/}
+
+\begin{itemize}
+    \item \textbf{Vitest}: Vitest is a fast, Vite-native unit testing framework designed for modern frontend applications.
+    \item \textbf{Advantages of Vitest}: Blazing fast test runs thanks to Vite integration, first-class TypeScript support, watch mode for instant feedback, and easy migration from Jest.
+    \item \textbf{Disadvantages of comparable technologies}: 
+    Jest – More mature and widely used but slower on large codebases. 
+    Mocha – Flexible but requires additional libraries for assertions and mocking.
+    \url{https://vitest.dev/}
+
+    \item \textbf{Cypress}: Cypress is an end-to-end (E2E) testing framework for web applications, running directly in the browser for real-world testing.
+    \item \textbf{Advantages of Cypress}: Fast and reliable E2E tests, real-time reloading, automatic waiting for elements, powerful debugging tools, and a vibrant community.
+    \item \textbf{Disadvantages of comparable technologies}: 
+    Playwright – Cross-browser and powerful but newer with less built-in GUI support. 
+    Selenium – Very flexible and language-agnostic but slower setup and execution compared to Cypress.
+    \url{https://www.cypress.io/}
+\end{itemize}
+
 
 \section{Development Tools}
 [Team development workflow]

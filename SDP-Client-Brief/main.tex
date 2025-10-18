@@ -8,7 +8,90 @@
 \usepackage{booktabs} % For professional-looking tables
 \usepackage{url} % For proper URL formatting
 \usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{float} 
+\usepackage{graphicx}
+\graphicspath{{chapters/}}
+\usepackage{float}
+\usepackage{amssymb} 
+\usepackage{ulem}
+\usepackage{graphicx} 
 
+% Configure lstlisting
+\lstset{
+  basicstyle=\ttfamily\footnotesize,
+  breaklines=true,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{green!50!black},
+  stringstyle=\color{orange},
+  showstringspaces=false,
+  frame=single,
+  escapeinside={(*@}{@*)}
+}
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Define colors for code
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+% General code style
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegray},
+    keywordstyle=\color{blue},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+% Enable JavaScript
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break, let, const, await, async},
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  sensitive=true,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]"
+}
+
+% Enable JSON
+\lstdefinelanguage{json}{
+    basicstyle=\ttfamily,
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    literate=
+     *{0}{{{\color{black}0}}}{1}
+      {1}{{{\color{black}1}}}{1}
+      {2}{{{\color{black}2}}}{1}
+      {3}{{{\color{black}3}}}{1}
+      {4}{{{\color{black}4}}}{1}
+      {5}{{{\color{black}5}}}{1}
+      {6}{{{\color{black}6}}}{1}
+      {7}{{{\color{black}7}}}{1}
+      {8}{{{\color{black}8}}}{1}
+      {9}{{{\color{black}9}}}{1}
+}
 
 
 \title{Study Buddy Enhanced}
@@ -35,7 +118,6 @@
         Favour Mtshali & 2662283 \\
         Dimpho Matea & 2678460 \\
         Sinethemba Khumalo & 2672254\\
-        Author Six & 678901 \\
         Hulisani Netshaulu & 2769364\\
         \bottomrule
     \end{tabular}
@@ -51,8 +133,14 @@
 \include{chapters/frontend}
 \include{chapters/backend}
 \include{chapters/testing}
+\include{chapters/testingProgress}
 \include{chapters/meetings}
 \include{chapters/pitfalls}
 \include{chapters/userfeed}
-
+\include{chapters/database}
+\include{chapters/apiIntegration}
+\include{chapters/wireframes}
+\include{chapters/features}
+\include{chapters/stakeholder}
+\include{chapters/performance}
 \end{document}

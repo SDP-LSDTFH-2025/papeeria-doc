@@ -1,0 +1,69 @@
+\chapter{API Integration}
+\label{chap:apiintegration}
+
+In this chapter, we discuss the integration of third-party Application Programming Interfaces (APIs) that enhance the functionality, scalability, and security of our system. Specifically, we focus on the use of the \textbf{Google Authentication API} and the \textbf{Firebase Authentication API}. These APIs were chosen due to their robust features, ease of integration, and ability to provide secure, reliable user authentication.
+
+\section{Google Authentication API}
+The Google Authentication API (Google Auth) enables users to log in using their existing Google accounts, reducing friction during registration and ensuring a seamless onboarding process. By leveraging OAuth 2.0 and OpenID Connect, Google Auth ensures:
+\begin{itemize}
+    \item \textbf{Enhanced Security:} OAuth 2.0 provides token-based authentication, which eliminates the need to handle user passwords directly, reducing vulnerability to data breaches.
+    \item \textbf{User Convenience:} Users can sign in without creating a new username and password, improving accessibility and reducing account management overhead.
+    \item \textbf{Scalability:} The integration scales efficiently to accommodate a growing user base, as the authentication process is managed by Google’s reliable infrastructure.
+    \item \textbf{Cross-Platform Support:} Google Auth works across multiple devices and platforms, ensuring consistent login experiences for users.
+\end{itemize}
+
+\section{Firebase Authentication API}
+Firebase Authentication complements Google Auth by offering a comprehensive, developer-friendly authentication solution that supports multiple sign-in methods, including email/password, phone number verification, and third-party identity providers.
+\begin{itemize}
+    \item \textbf{Ease of Implementation:} Firebase provides Software Development Kits (SDKs) for popular programming languages and frameworks, reducing development complexity.
+    \item \textbf{Real-Time Sync:} As part of the Firebase ecosystem, authentication status can be synchronized in real-time with other Firebase services, such as Firestore or Realtime Database.
+    \item \textbf{Secure Token Management:} Firebase automatically handles token generation, renewal, and expiration, ensuring high levels of security.
+    \item \textbf{Customizable User Experience:} Firebase offers customizable authentication flows to align with the branding and design of the application.
+\end{itemize}
+
+\section{Justification of API Choices}
+The decision to integrate Google Auth and Firebase Authentication was driven by the need to provide a secure, scalable, and user-friendly authentication mechanism. Using these APIs offers the following advantages:
+\begin{enumerate}
+    \item \textbf{Security Best Practices:} Both APIs use industry-standard encryption and authentication protocols, reducing risks associated with password storage.
+    \item \textbf{Reduced Development Overhead:} Leveraging these mature APIs significantly decreases the time and resources required to implement and maintain authentication features.
+    \item \textbf{Reliability and Scalability:} Both Google and Firebase are backed by Google Cloud’s infrastructure, ensuring minimal downtime and high scalability for future growth.
+    \item \textbf{Integration Flexibility:} These APIs integrate seamlessly with various frontend frameworks, backend services, and cloud environments, allowing for a flexible system design.
+\end{enumerate}
+
+
+\section{Event App API integration:}
+The team has been fortunate to find a group that will lend us their deployed api,regarding the events ,we plan to use their api in such a way that we can use their events that they created as a way in which Study buddy users can make an event that will correlate to study session.
+\begin{enumerate}
+    \item \textbf{Concerns:} We can create an event according to their schema but we ran through the issue of how we will access it to display on our application.
+    \item \textbf{Discussed on parsing their api to backend:} The team came out with a viable strategy to use their API by asking for additional information on how to better use their api as asking them to change their api would be not ideal.
+    \url {https://codexa-v1.github.io/Codexa/development/BackendApi.html}
+\end{enumerate}
+
+\section{Google Calender API:}
+The team has agreed to integrate study buddy with google calender API ,reason being is that students can mount studdy session events on it and it could be synced to any device as long as they have google.
+\begin{enumerate}
+    \item \textbf{Concerns:} Pricing ,will we need to change some endpoints to make it a suitable add on.
+\end{enumerate}
+
+
+\section{Study Buddy API-scrutiny}
+This section evaluates the architecture, robustness, and scalability measures implemented in the Study Buddy API. It highlights the testing approach, schema design, scalability considerations, and deployment practices.
+
+\begin{enumerate}
+    \item \textbf{Stress Testing:} 
+    The API undergoes regular stress and load testing to evaluate its performance under high-traffic scenarios. Postman Runner is used to simulate concurrent users and heavy request loads. Metrics such as response time, throughput, and error rate are measured to identify bottlenecks and improve system resilience.
+
+    \item \textbf{Schema Robustness:} 
+    The API follows a well-defined RESTful schema with clear API naming conventions according to endpoints use (e.g., \texttt{/users/123}). Proper use of HTTP status codes and versioning strategies further improves reliability and forward compatibility.
+
+    \item \textbf{Scalability Measures:} 
+    The API is designed to be stateless, meaning each request contains all necessary context (e.g., authentication via JWT). This enables horizontal scaling by distributing traffic across multiple servers using load balancers. Rate limiting and throttling mechanisms are in place to prevent abuse and maintain service quality.
+
+    \item \textbf{Deployed Site Practices:} 
+    The api is deployed on Render platform,as Render lets you provision PostgreSQL databases, run cron jobs, and set up background workers alongside your API — all within one dashboard.
+    \item \url{https://sdp-project-zilb.onrender.com}
+\end{enumerate}
+
+
+Overall, the integration of these APIs improves the system’s authentication capabilities, enabling developers to focus more on core features while ensuring user data security and a smooth user experience.
+
